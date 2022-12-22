@@ -1,0 +1,31 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+DESTDIR=$(CURDIR)/debian/node-utilities
+PKGDIR=$(DESTDIR)/usr/lib/nodejs/utilities
+
+override_dh_install:
+	dh_install
+	sed -i "s|e('\./|e('utilities/|" $(PKGDIR)/*.js
+	mkdir -p $(CURDIR)/debian/node-utilities/usr/share/nodejs/
+	mv $(CURDIR)/debian/node-utilities/usr/lib/nodejs/utilities \
+		$(CURDIR)/debian/node-utilities/usr/share/nodejs/
+
+override_dh_auto_install:
+	# do nothing
+
+override_dh_auto_test:
+	dh_auto_test
+ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+	if [ -f /usr/bin/jake ]; then \
+		echo jake test; \
+	fi
+endif
+
+%:
+	dh $@
+
+.PHONY: override_dh_install override_dh_auto_install override_dh_auto_test

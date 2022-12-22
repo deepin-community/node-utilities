@@ -1,0 +1,15 @@
+Source: node-utilities
+Section: devel
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.5.1
+Homepage: https://github.com/mde/utilities
+Rules-Requires-Root: no
+
+Package: node-utilities
+Architecture: all
+Depends: ${misc:Depends}, nodejs
+Description: classic collection of JavaScript utilities
+ Contains various helper utilities for other applications.

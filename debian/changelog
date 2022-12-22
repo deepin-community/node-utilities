@@ -1,0 +1,40 @@
+node-utilities (1.0.5-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update nodejs install path.
+  * Update packaging bits.
+  * Update debhelper level to 13 .
+  * Update Standards-Version to 4.5.1:
+    - change package priority to optional.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 02 Jan 2021 15:15:12 +0100
+
+node-utilities (1.0.4-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 29 Dec 2020 02:19:48 +0100
+
+node-utilities (1.0.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * Build without Jake (closes: #761672).
+  * Respect nocheck in DEB_BUILD_OPTIONS .
+  * Update Standards-Version to 3.9.6 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 12 Oct 2014 19:39:03 +0000
+
+node-utilities (0.0.31-1) unstable; urgency=low
+
+  * New upstream release.
+  * Run self-test during build.
+  * Update Standards-Version to 3.9.5 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 17 Feb 2014 14:22:59 +0000
+
+node-utilities (0.0.24-1) unstable; urgency=low
+
+  * Initial release (closes: #706626).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 02 May 2013 07:55:45 +0000
